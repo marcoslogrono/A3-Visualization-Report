@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+		<p>
+			<strong>Marcos Adrian Logrono</strong> — <em>mlogrono@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="" width="700"/>
+			</figure>
+
+			<p>
+				This COVID-19 visualization was from a New York Times article, so the audience is the general public.
+				Here are some insights about the visualization:
+			</p>
+
+			<ul>
+				<li>We can observe the beginning of the pandemic between March and April 2020. It is interesting that from April to October 2020, the 7-day average of new confirmed COVID-19 cases remained relatively stable. 
+					This might point towards the effectiveness of the initial containment measures carried out in the USA.</li>
+				<li>There are multiple periods or "waves" of high COVID activity, specifically from mid-November 2020 to February 2021, from August to October 2021, and past January 2022. 
+					These time periods are likely to match with the emergence of the different COVID variants that lead to multiple waves of high transmissions during the pandemic.</li>
+				<li>From June to July 2021, we can observe a period of very low weekly new cases, similar in scale to those seen at the beginning of the pandemic. 
+					This begs the question, what exactly happened during this period? How is it that COVID was seemingly under control in this period before leading to a wave of high weekly new cases? 
+					Does it have to do with policy decisions, or cultural shifts within the public?</li>
+			</ul>
+
+			<p>
+				Things the visualization does well:
+			</p>
+
+			<ul>
+				<li>The encoding of COVID cases in the form of area along a spiral is effective in highlighting the times in which new COVID cases were at its peak. 
+					Areas with the most and least cases significantly stand out in the figure.</li>
+				<li>The spiral design naturally guides the viewer to start reading from the center, so the visualization does a good job of walking the viewer 
+					through the timeline of the COVID pandemic.</li>
+				<li>Locating the months of the year as "coordinates" (i.e. Jan and July would be equivalent to North and South) is a creative design choice that makes it easy for the viewer to locate a certain point in time, 
+					even if the month and year are not explicitly labeled for each data point.</li>
+			</ul>
+
+			<p>
+				Design critique:
+			</p>
+
+			<ul>
+				<li>The choice of encoding COVID cases as area, and not having a dimension scale makes the gradual change in cases hard to read. 
+					This relates to Weber's concept of just noticeable difference (JND) discussed in class - the figure is effective at representing large changes, 
+					but not gradual changes in adjacent data points.</li>
+				<li>The use of a "radial coordinate" (the dashed lines that connect the month labels to the center) seems to be unnecessary. 
+					Put in a different way, there is no information encoded along the dashed radial lines. These could be eliminated, or the radial extent of the spiral could be increased or decreased, 
+					and the figure would not loose any information.</li>
+				<li>The use of a single color also reduces the apparent difference in COVID cases between peaks and low periods, which connects with my first point of JND. Using a sequential color scale, 
+					along with the area encoding for COVID cases, might provide a more impactful visualization.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+
+      <figure>
+				<img src="images/sketch1.png" alt="" width="700"/>
+				<figcaption>
+          Circular timeline plot of COVID-19 cases (2020-2021).
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>For this sketch I aim to draw weekly new COVID cases over a circular timeline. Similar to the original NYT spiral plot, the timeline is continuous over the years (2020 leads to 2021, and so on) and is meant to be read clockwise. 
+					I also located the months of the year as "coordinates", with January starting at the north position.</li>
+				<li>I made use of the radial scale in a different way - instead of using area, I encoded 7-day average new COVID-19 cases as the radial distance between the "0" circle and the plotted lines.</li>
+				<li>Color was used as a dimension for the years - blue is for the 2020 line section and red is for 2021.</li>
+				<li>This sketch simplifies the original figure, but by using a circular timeline it might be harder for the intended audience to read the data. I will try to attend this issue in the following figure.</li>
+			</ul>
+
+			<figure>
+				<img src="images/sketch2.png" alt="" width="700"/>
+				<figcaption>
+          Radial bar chart for average weekly new COVID-19 cases by month (2020-2021).
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>Similar to the first sketch, I located the months as cardinal coordinates. Also, I used the radial scale to measure the average weekly new COVID cases per month. </li>
+				<li>To make the figure easier to read, the information is encoded in discrete bars for each month instead of using lines. </li>
+				<li>The years in the timeline are separated into two circular charts.</li>
+				<li>I believe that these design choices help visualize each year better, this sketch eliminates the continuity in the data, and might require a little more work to compare 
+					specific months or trends between the years. I aim to address this in the next sketch.</li>
+			</ul>
+
+			<figure>
+				<img src="images/sketch3.png" alt="" width="700"/>
+				<figcaption>
+          Bar chart comparing average weekly new COVID-19 cases by month for the years 2020 and 2021.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>For the third sketch I step away from the circular type charts from the previous sketches, and plot the information in a typical cartesian chart. The months dimension is in the "X" axis, 
+					and the average weekly new cases are measured in the "Y" axis. </li>
+				<li>I use discrete bars to represent the information, and for each month there are two bars - a blue one for the year 2020, and the red one for 2021. </li>
+				<li>For this design it is easy to observe the trends in the data as well as compare the months of the different years. However, this design takes away the yearly "timeline" aspect of the previous sketches.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+      
+			<figure>
+				<img src="images/FinalVis.png" alt="" width="700"/>
+				<figcaption>
+          Final redesigned chart from NYT COVID-19 article.
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				In my final design I decided to incorporate aspects of all three sketches. With the data provided, I initially explored and considered using additional metrics (new deaths, new tested, etc.) but I focused on average weekly new cases for each month as to compare with the original NYT plot. I filtered out data past December 2021, as the article was posted in the first week of January 2022. 
+				In fact, the study was trying to project new cases for January 2022 due to the Omicron variant.
+				In terms of design, I used the circular chart type I explored in my sketches and plotted the entire timeline from January 2020 to December 2021 in one circumference. Months are located as coordinates, and the chart is meant to be read starting at the top January 2020. The length of the bar along the radial scale represents the average weekly new COVID cases for that month. I also used a 
+				sequential color scale to encode this information, as to provide an additional visual indicator for the reader. In short, my goal here was to reinvent the original NYT plot with a more effective visualization while telling the same story and highlighting the same trends in the data (the different waves of the COVID-19 pandemic).  I feel the final design effectively captures the waves of the COVID-19 pandemic and is highly intuitive to read for the general audience
+      </p>
+
+      <h3>Reflection</h3>
+
+      <p>
+        In summary, I am very satisfied with the final result. While I addressed most of my critiques, I feel that the first one wasn't as thoroughly resolved, and I still see some issues with "JND". To improve differentiation between adjacent plot points with small variations in magnitude, I implemented a sequential color scale. Although this helps to some extent, certain parts of the visualization remain difficult to distinguish - for example, the period from April to June 2020. 
+		This "critique by redesign" exercise deepened my understanding of the trade-offs and difficult decisions involved in creating an effective visualization. Some aspects of the data inevitably become less prominent when emphasizing particular trends. In hindsight, identifying areas for improvement in a visualization is much easier than constructing it in the first place.
+      </p>
+		</section>
+	</main>
+</body>
+</html>
